@@ -1,5 +1,5 @@
 {
-    "name": "get-app-icon",
+    "name": "@todesktop/get-app-icon-prebuild",
     "version": "1.0.1",
     "description": "Get desktop application icon",
     "main": "dist/index.js",
@@ -12,7 +12,7 @@
     "license": "LGPL-3.0-or-later",
     "dependencies": {
         "@types/node": "^12.12.7",
-        "file-icon": "^3.1.0",
+        "@todesktop/file-icon-prebuild": "^3.1.0",
         "icon-extractor": "^1.0.3",
         "typescript": "^3.7.2"
     },

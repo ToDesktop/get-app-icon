@@ -1,23 +1,4 @@
 "use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -57,10 +38,16 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.extractIcon = void 0;
 // @ts-ignore
-var file_icon_1 = __importDefault(require("file-icon"));
+var file_icon_prebuild_1 = __importDefault(require("@todesktop/file-icon-prebuild"));
 var winIcon;
 function extractIcon(path) {
     return __awaiter(this, void 0, void 0, function () {
@@ -69,7 +56,7 @@ function extractIcon(path) {
             switch (_a.label) {
                 case 0:
                     if (!(process.platform === "darwin")) return [3 /*break*/, 2];
-                    return [4 /*yield*/, file_icon_1.default.buffer(path)];
+                    return [4 /*yield*/, file_icon_prebuild_1.default.buffer(path)];
                 case 1:
                     buffer = _a.sent();
                     return [2 /*return*/, "data:image/png;base64," + buffer.toString("base64")];

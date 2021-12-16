@@ -1,5 +1,5 @@
 // @ts-ignore
-import macIcon from "file-icon";
+import macIcon from "@todesktop/file-icon-prebuild";
 let winIcon: any;
 
 export async function extractIcon(path: string): Promise<string> {
